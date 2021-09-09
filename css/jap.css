@@ -1,0 +1,25 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin:0;
+    padding:0px;
+}
+
+#jap_titulo{
+    text-align: center;
+    padding:10px;
+    background:silver;
+    color:rgb(44, 43, 43);
+    font-weight: bold;
+    height:20px;
+}
+
+#jap_cuerpo{
+    position:absolute;
+    top:40px;
+    width:100vw;
+    background-color: rgb(236, 233, 233);
+    height:calc(100vh - 40px);
+}
