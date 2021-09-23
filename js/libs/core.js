@@ -8,12 +8,27 @@ class App{
     tipo=0; //0:celular 1:escritorio
     nombre="My jsApp"; //nombre de la aplicacion
     conn = null; //conector a la Base de datos local
-    ws = null;
+    ws = {call:function(x,y,z){
+        return {error: "JWS no esta activado en config.js o la propiedad usarJWS esta inactiva"}
+    }};
     db='';
+    ventanaActual=null; //Indica que ventana esta enfocada, util para el focus y el lost focus
+
+    usarJWS=false; //indica si se debe construir japp.ws
+    historial=[]; //pila para controlar la navegacion
+    timer = new Procesador(); //controlador de procesos
+    vistaRuta = ''//Si aparece vacia se usara las vistas de la estructura de JAPP o bien una ruta diferente
+    local = null; //
 
     constructor(config){
         for(var i in config)
             this[i] = config[i];
+
+        if(typeof config.useJws != 'undefined'){
+            if(config.useJws){
+                this.ws = new jwsClient(config.url, config.namespace);
+            }
+        }
 
         if (this.tipo == 0){ //Si es tipo celular
             var titulo = document.createElement("div");
