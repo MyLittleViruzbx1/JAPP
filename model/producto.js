@@ -1,14 +1,14 @@
 "use strict";
-export class producto{
+export class Producto{
     codigo;
     nombre;
-    categoria_id;
-    marca_id;
-    foto;
-    stock;
-    ranking;
+    categoria_id = 0;
+    marca_id = 0;
+    foto = '';
+    stock = 0;
+    ranking = 0;
 
-    set(objeto){
+    insertar(objeto, ret=undefined){
         var retorno = {error:''};
         if(typeof objeto.codigo =='undefined') retorno.error='Se esperaba un codigo';
         if(typeof objeto.nombre =='undefined') retorno.error='Se esperaba un nombre';
