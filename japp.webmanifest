@@ -1,0 +1,17 @@
+{
+    "name": "JAPP framework ALpha 0.1",
+    "short_name": "JAPP A-01",
+    "description": "Frameword para aplicaciones progresivas",
+    "icons":[
+        {
+            "src": "assets/icons/icono.png",
+            "sizes": "58x58",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/index.html",
+    "display": "fullscreen",
+    "theme_color": "#B12A34",
+    "background_color": "#B12A34"
+
+}
