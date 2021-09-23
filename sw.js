@@ -1,0 +1,1 @@
+const CACHE = 'JAPP-v1';
